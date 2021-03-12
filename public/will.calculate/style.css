@@ -119,7 +119,7 @@ header h1{
 .calculator {
     position: relative;
     overflow: hidden;
-    width: 20rem;
+    width: 16.5rem;
     border-radius: .5rem;
     background-color: var(--calculator-display);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -131,7 +131,7 @@ header h1{
 .display-fade {
     position: absolute;
     width: 100%;
-    height: 2.5rem;
+    height: 3.5rem;
     background-image: linear-gradient(var(--calculator-display), rgba(0, 0, 0, 0));
 }
 .display {
@@ -149,7 +149,7 @@ header h1{
     justify-content: flex-end;
     color: var(--calculator-display-text);
     text-align: right;
-    height: 3rem;
+    height: 4rem;
     padding: 0rem 1rem 0rem 1rem;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -162,7 +162,11 @@ header h1{
 
 .keyboard {
     display: grid;
-    grid-template-areas: '. . . .' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'dot zero clear equal';
+    grid-template-areas:    'sqrt pwr divide multiplication' 
+                            'seven eight nine minus' 
+                            'four five six plus' 
+                            'one two three equal' 
+                            'dot zero clear equal';
     grid-gap: 2px;
 }
 
@@ -173,7 +177,7 @@ header h1{
     color: var(--calculator-key-accent);
     border: none;
     outline: none;
-    min-height: 4rem;
+    min-height: 3.4rem;
     background-color: var(--calculator-key);
 }
 
@@ -182,6 +186,24 @@ header h1{
     background-color: var(--color-key-active);
 }
 
+.plus{
+    grid-area: plus;
+}
+.minus{
+    grid-area: minus;
+}
+.times{
+    grid-area: multiplication;
+}
+.divide{
+    grid-area: divide;
+}
+.sqrt{
+    grid-area: sqrt;
+}
+.pwr{
+    grid-area: pwr;
+}
 .one {
     grid-area: one;
 }
@@ -262,7 +284,7 @@ header h1{
     .calculator {
         width: 80vw;
     }
-    .calculator .key{
-        min-height: 4.5rem;
+    .calculator .key, .calculator .operator{
+        min-height: 4rem;
     }
 }
